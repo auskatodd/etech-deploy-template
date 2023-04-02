@@ -1,0 +1,76 @@
+   21  mkdir template
+   22  ls
+   23  cd template/
+   24  clear
+   25  mkdir dev uat prod
+   26  ls
+   27  sudo vi updatetemplate.sh
+  
+   37  sudo vi dev/etech-deploy.sh
+   38  sudo vi uat/etech-deploy.sh
+   39  sudo vi prod/etech-deploy.sh
+   40  clear
+   41  cat updatetemplate.sh
+   42  cat dev/etech-deploy.sh
+   43  cat uat/etech-deploy.sh
+   44  cat prod/etech-deploy.sh
+   45  clear
+   46  cd ..
+   47  ls
+   48  mkdir etech-auth
+   49  cp -r etech-auth/
+   50  cp -r template/* etech-auth/
+   51  cd template/
+   52  cd ..
+   53  sudo -x template/updatetemplate.sh
+   54  sudo chmod -x template/updatetemplate.sh
+   55  clear
+   56  cd etech-auth/
+   57  clear
+   58  ls
+   59  clear
+   60  ./updatetemplate.sh etech-auth
+   61  ls dev/etech-deploy.sh
+   62  cat dev/etech-deploy.sh
+   63  cat uat/etech-deploy.sh
+   64  cat prod/etech-deploy.sh
+   65  cd ..
+   66  ls
+   67  git clone https://github.com/auskatodd/etech-deploy-template.git
+   68  ls
+   69  cd etech-deploy-template/
+   70
+   75  mkdir etech-reg etech-link
+   76  cp -r template/* etech-reg/
+   77  cp -r template/* etech-link/
+   78  cd etech-reg/
+   79  clear
+   80  ls
+   81  clear
+   82  sudo chmod +x updatetemplate.sh
+   83  cat dev/etech-deploy.sh
+   84  cat uat/etech-deploy.sh
+   85  cat prod/etech-deploy.sh
+   86  ./updatetemplate.sh etech-reg
+   87  cat dev/etech-deploy.sh
+   88  cat uat/etech-deploy.sh
+   89  cat prod/etech-deploy.sh
+   90  cd ../etech-link/
+   91  sudo chmod +x updatetemplate.sh
+   92  ./updatetemplate.sh etech-link
+   93  cat dev/etech-deploy.sh
+   94  cat uat/etech-deploy.sh
+   95  cat prod/etech-deploy.sh
+   96  cd ..
+   97  ls
+   98  clear
+   99  ls
+  100  mv etech-auth/ etech-deploy-template/
+  101  mv etech-reg/ etech-deploy-template/
+  102  mv etech-link/ etech-deploy-template/
+  103  mv template/ etech-deploy-template/
+  104  ls
+  105  cd etech-deploy-template/
+  106  ls
+  107  cd
+  108  history
